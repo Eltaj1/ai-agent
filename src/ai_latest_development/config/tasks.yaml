@@ -1,0 +1,30 @@
+retrieve_arxiv_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find ANY interesting and relevant information given
+    the current year is 2025.
+  expected_output: >
+    The list of 10 websites with the most relevant information about {topic}
+  agent: retrieve_arxiv
+
+website_scrape_task:
+  description: >
+    Scrape the website for the best Transformers and Large Language Models in Arxiv and information
+  expected_output: >
+    Fully scraped websites with all the important information from the website.
+  agent: website_scraper
+
+ai_arxiv_write_task:
+  description: >
+    Summarize the information from the websites into a fully fledge Transformers and Large Language Models in Arxiv in markdow format
+  expected_output: >
+    A fully fledged Transformers and Large Language Models in Arxiv reports with the main topics, each with a full section of information.
+    Formatted as markdown without '````'
+  agent: ai_arxiv_writer
+
+file_write_task:
+  description: >
+    Write the Transformers and Large Language Models in Arxiv reports to a file
+  expected_output: >
+    A fully fledged Transformers and Large Language Models in Arxiv reports with all information from previous task into a file named arxiv/{date}_arxiv_article.md
+  agent: file_writer
